@@ -8,11 +8,7 @@
     <img src="https://img.shields.io/twitter/follow/nimblepros.svg?label=Follow%20@nimblepros" alt="Follow @nimblepros" />
 </a>
 
-<p>
-
 ![Alt](https://repobeats.axiom.co/api/embed/be5094dd306ba53b8f4fc0b43c9de5d8ca23a608.svg "Repobeats analytics image")
-
-</p>
 
 # Clean Architecture
 
@@ -23,6 +19,7 @@ Learn more about Clean Architecture and this template in [NimblePros' Introducin
 This architecture is used in the [DDD Fundamentals course](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) by [Steve Smith](https://ardalis.com) and [Julie Lerman](https://thedatafarm.com/).
 
 :school: Contact Steve's company, [NimblePros](https://nimblepros.com/), for Clean Architecture or DDD training and/or implementation assistance for your team.
+
 
 ## Take the Course!
 
@@ -64,6 +61,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 Or if you're feeling really generous, we now support GitHub sponsorships - see the button above.
 
+
 ## Sponsors
 
 I'm please to announce that [Amazon AWS's FOSS fund](https://github.com/aws/dotnet-foss) has chosen to award a 12-month sponsorship to this project. Thank you, and thanks to all of my other past and current sponsors!
@@ -71,6 +69,7 @@ I'm please to announce that [Amazon AWS's FOSS fund](https://github.com/aws/dotn
 ## Troubleshooting Chrome Errors
 
 By default the site uses HTTPS and expects you to have a self-signed developer certificate for localhost use. If you get an error with Chrome [see this answer](https://stackoverflow.com/a/31900210/13729) for mitigation instructions.
+
 
 ## Versions
 
@@ -81,6 +80,7 @@ The main branch is now using **.NET 9**. This corresponds with NuGet package ver
 - [Live Stream Recordings Working on Clean Architecture](https://www.youtube.com/c/Ardalis/search?query=clean%20architecture)
 - [DotNetRocks Podcast Discussion with Steve "ardalis" Smith](https://player.fm/series/net-rocks/clean-architecture-with-steve-smith)
 - [Fritz and Friends Streaming Discussion with Steve "ardalis" Smith](https://www.youtube.com/watch?v=k8cZUW4MS3I)
+
 
 # Getting Started
 
@@ -138,11 +138,12 @@ dotnet new clean-arch -o Your.ProjectName
 The `Your.ProjectName` directory and solution file will be created, and inside that will be all of your new solution contents, properly namespaced and ready to run/test!
 
 Example:
+
 ![powershell screenshot showing steps](https://user-images.githubusercontent.com/782127/101661723-9fd28e80-3a16-11eb-8be4-f9195d825ad6.png)
 
 Thanks [@dahlsailrunner](https://github.com/dahlsailrunner) for your help getting this working!
 
-**Known Issues**: 
+**Known Issues**:
 
 - Don't include hyphens in the name. See [#201](https://github.com/ardalis/CleanArchitecture/issues/201).
 - Don't use 'Ardalis' as your namespace (conflicts with dependencies).
@@ -173,6 +174,7 @@ app.MapControllers();
 
 Once these are in place, you should be able to create a Controllers folder and (optionally) a Views folder and everything should work as expected. Personally I find Razor Pages to be much better than Controllers and Views so if you haven't fully investigated Razor Pages you might want to do so right about now before you choose Views.
 
+
 ### Add Razor Pages
 
 You'll need to add support for Razor Pages to the Program.cs file. You need:
@@ -196,6 +198,7 @@ You should **download the repository**, unblock the zip file, and extract it to 
 You should **fork this repository** only if you plan on submitting a pull request. Or if you'd like to keep a copy of a snapshot of the repository in your own GitHub account.
 
 You should **clone this repository** if you're one of the contributors and you have commit access to it. Otherwise you probably want one of the other options.
+
 
 ## Running Migrations
 
@@ -232,6 +235,7 @@ If you're used to building applications as single-project or as a set of project
 
 Steve Smith also maintains Microsoft's reference application, eShopOnWeb, and its associated free eBook. Check them out here:
 
+
 - [eShopOnWeb on GitHub](https://github.com/nimblepros/eShopOnWeb) (now supported by [NimblePros](https://nimblepros.com))
 - [Architecting Modern Web Applications with ASP.NET Core and Microsoft Azure](https://aka.ms/webappebook) (eBook)
 
@@ -258,6 +262,7 @@ The use cases / application project includes the set of all commands and queries
 The Web project includes all API endpoints, which include their own request and response types, following the [REPR pattern](https://deviq.com/design-patterns/repr-design-pattern). The FastEndpoints library includes built-in support for validation using FluentValidation on the request types. This is a natural place to perform input validation as well.
 
 Having validation occur both within the API endpoints and then again at the use case level may be considered redundant. There are tradeoffs to adding essentially the same validation in two places, one for API requests and another for messages sent to Use Case handlers. Following defensive coding, it often makes sense to add validation in both places, as the overhead is minimal and the peace of mind of mind and greater application robustness is often worth it.
+
 
 ## The Core Project
 
